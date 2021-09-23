@@ -1,2 +1,2 @@
-# pet-projects-golang
-Pet-проекты на Golang (Go)
+# pet-projects-golang-tempate
+Шаблоны Pet-проекты на Golang (Go)
