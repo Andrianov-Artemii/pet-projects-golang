@@ -4,7 +4,7 @@
 Чтобы работать с ботом - нужно создать переменную в которую он будет записан
 ```golang
 // Add API key
-	bot, err := tgbotapi.NewBotAPI("1982018798:AAFrcMsT01yY3Fifizn8nPB5F9EYTvezEVY")
+	bot, err := tgbotapi.NewBotAPI("<KEY>")
 	// Errors panic
 	if err != nil {
 		log.Panic(err)
@@ -64,7 +64,7 @@
 Чтобы отправить сообщение с картинкой - добавим данный код. При создании сообщения добавить путь к файлу, в котором лежит картинка и `Caption` (подпись)
 ```golang
     msg := tgbotapi.NewPhotoUpload(update.Message.Chat.ID, "PATH")
-	msg.Caption = "Низкие ставки по кредитам и большой кэшбэк по картам в МТС Банке."
+	msg.Caption = "<TEXT>"
 	bot.Send(msg)
 ```
 
