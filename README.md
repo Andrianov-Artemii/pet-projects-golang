@@ -4,7 +4,7 @@
 Чтобы работать с ботом - нужно создать переменную в которую он будет записан
 ```golang
 // Add API key
-	bot, err := tgbotapi.NewBotAPI("<KEY>")
+	bot, err := tgbotapi.NewBotAPI("KEY")
 	// Errors panic
 	if err != nil {
 		log.Panic(err)
@@ -47,7 +47,7 @@
 Однако сообщения не всегда будут пустыми. Чтобы проверить, что в сообщении что-то пришло - нужно проверить, что оно равно строке, где строка - сообщение, которое мы ожидаем получить
 
 ```golang
-	if update.Message == "<MESSAGE>" { 
+	if update.Message.Text == "MESSAGE" { 
 	    // Обработка сообщения
 	}
 ```
@@ -55,7 +55,7 @@
 ## Отправка сообщений с текстом
 Чтобы отправить просто текстовое сообщение - добавим данный код (создадим `msg` и заставим `bot` его отправить)
 ```golang
-	msg := tgbotapi.NewMessage(update.Message.Chat.ID, "<MESSAGE>")
+	msg := tgbotapi.NewMessage(update.Message.Chat.ID, "MESSAGE")
 	bot.Send(msg)
 }
 ```
